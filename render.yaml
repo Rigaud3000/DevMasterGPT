@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: devmastergpt
+    env: python
+    buildCommand: "cd client && npm install && npm run build"
+    startCommand: "python server/app.py"
+    envVars:
+      - key: HUGGINGFACEHUB_API_TOKEN
+        value: your_token_here
